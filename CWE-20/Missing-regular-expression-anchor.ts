@@ -1,7 +1,8 @@
-function validateInput(input: string): boolean {
+function checkPasswordStrength(password: string): boolean {
     // Missing regular expression anchor
-    const pattern = "admin";
-    const regex = new RegExp(pattern);
+    const weakPasswordPattern = "password";
 
-    return regex.test(input);
+    const regex = new RegExp(weakPasswordPattern);
+
+    return regex.test(password);
 }
